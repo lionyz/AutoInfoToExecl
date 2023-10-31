@@ -1,0 +1,14 @@
+1.配置路径
+主要调用enscan，oneforall，httpx，ehole等工具，把工具文件夹放到tools目录下，文件夹名更改为与config.py中同名
+enscan配置config.yaml中output: 配置在result的绝对路径
+
+2.用法
+python AutoInfor.py -m 1|0 -n test
+
+-m 参数中0为无域名收集，-n 输入公司名称，公司名称为汇总表execl名
+-m 参数中1为有域名收集，-n 输入随意名称，名称为汇总表execl名，在脚本的urls.txt文件中放入需要收集的域名信息
+
+例如：
+python AutoInfor.py -m 0 -n 小米  //使用enscan收集到的域名进行，汇总表为小米.xlsx
+
+python AutoInfor.py -m 1 -n 小米 //在脚本目录urls.txt下放入域名，将按照urls.txt下的域名进行，汇总表为小米.xlsx
